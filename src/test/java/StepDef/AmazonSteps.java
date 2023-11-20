@@ -10,7 +10,7 @@ import org.junit.Assert;
 public class AmazonSteps {
     @Given("I am on Amazon application")
     public void iAmOnAmazonApplication() {
-        Basepage.SetDriver();
+//        Basepage.SetDriver();
         AmazonLoginPages.LaunchURL();
     }
 
