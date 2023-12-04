@@ -3,18 +3,30 @@ package BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.PageFactory;
 
 public class Basepage {
 
-    static WebDriver driver;
+    private static WebDriver driver;
 
-    public static void SetDriver(){
+    public static WebDriver getdriver(){
 
-        System.setProperty("webdriver.chrome.driver", "src/Drivers/chromedriver.exe");
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--remote-allow-origins=*");
-        driver = new ChromeDriver(chromeOptions);
-        driver.manage().window().maximize();
 
+        if (driver == null) {
+            System.setProperty("webdriver.chrome.driver", "src/Drivers/chromedriver.exe");
+            ChromeOptions chromeOptions = new ChromeOptions();
+            chromeOptions.addArguments("--remote-allow-origins=*");
+            driver = new ChromeDriver(chromeOptions);
+            driver.manage().window().maximize();
+        }
+        return driver;
     }
+    public static void quitDriver() {
+        if (driver != null) {
+            driver.quit();
+            driver = null;
+        }
+    }
+
+
 }
