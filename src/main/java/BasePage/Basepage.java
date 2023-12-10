@@ -9,10 +9,12 @@ public class Basepage {
 
     private static WebDriver driver;
 
+
     public static WebDriver getdriver(){
 
-
         if (driver == null) {
+
+
             System.setProperty("webdriver.chrome.driver", "src/Drivers/chromedriver.exe");
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.addArguments("--remote-allow-origins=*");

@@ -28,6 +28,7 @@ public class AmazonSteps   {
     public void iAmOnAmazonApplication() {
      //   basepage.setDriver();
             page.Loginpages.LaunchURL();
+            
     }
 
     @When("I move to cart")

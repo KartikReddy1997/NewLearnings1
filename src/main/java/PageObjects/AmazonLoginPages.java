@@ -1,11 +1,13 @@
 package PageObjects;
 
 import BasePage.Basepage;
+import Variables.BrowserConfig;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.Browser;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
@@ -26,8 +28,8 @@ public AmazonLoginPages(WebDriver driver) {
 
 
     public  void LaunchURL()    {
-
-        driver.get("https://www.amazon.in/");
+        String url=BrowserConfig.property.getProperty("URL");
+               driver.get(url);
     }
 
     public  void clickCart()    {
