@@ -17,9 +17,9 @@ public class BrowserConfig {
     public static void init() throws IOException {
         property=new Properties();
         try {
-            System.out.println("in try");
             InputStream instm = new FileInputStream(configpath);
             property.load(instm);
+
         } catch (FileNotFoundException e) {
             System.out.println("file not found");
             // TODO Auto-generated catch block

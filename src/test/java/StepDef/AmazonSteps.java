@@ -14,7 +14,7 @@ public class AmazonSteps   {
 
 
     private AmazonContainer page=new AmazonContainer();
-    private WebDriver driver;
+
 
 //    public AmazonSteps() {
 //        // Default constructor (zero-argument)
